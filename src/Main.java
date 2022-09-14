@@ -10,7 +10,6 @@ public class Main {
         GetABC();
     }
 
-
     private static void GetABC() throws InterruptedException {
         Scanner input = new Scanner(System.in); //Scanner for user input, this scanner will be used for every user input in this entire method
 
@@ -136,12 +135,19 @@ public class Main {
         DrawingTool pencil = new DrawingTool(paper);
 
 
-        //Creates
+        String aString = String.valueOf(A);
+        int aLength = aString.length();
+
+        System.out.println(aLength);
+
+
+
+        //shows the value of a
         pencil.up();
         pencil.turnRight();
-        pencil.move(-40);
+        pencil.move((aLength*-10));
         pencil.down();
-        pencil.drawString(Double.toString(A));
+        pencil.drawString(aString);
         pencil.up();
         pencil.turnLeft();
 
